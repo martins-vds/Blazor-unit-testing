@@ -1,0 +1,29 @@
+﻿<div class="forecast-with-telerik-grid">
+    <TelerikGrid Class="forecast-grid" Data="@Forecasts" Pageable="true" PageSize="10" Sortable="true" Height="500px"
+                 Reorderable="true" Resizable="true" Groupable="true" FilterMode="GridFilterMode.FilterMenu">
+        <GridColumns>
+            <GridColumn Field="@(nameof(WeatherForecast.Date))" Title="Date" Width="100px" Groupable="false" />
+            <GridColumn Field="@(nameof(WeatherForecast.TemperatureC))" Title="Temp. (C)" Width="80px" />
+            <GridColumn Field="@(nameof(WeatherForecast.TemperatureF))" Title="Temp. (F)" Width="80px" />
+            <GridColumn Field="@(nameof(WeatherForecast.Summary))" Title="Summary" Width="120px" />
+        </GridColumns>
+        <DetailTemplate>
+            @{
+                WeatherForecast weatherForecast = context as WeatherForecast;
+                <WeatherForecastDetail WeatherForecast="@weatherForecast"></WeatherForecastDetail>
+            }
+        </DetailTemplate>
+    </TelerikGrid>
+</div>
+
+@code {
+
+    private WeatherForecast[] _forecasts = Array.Empty<WeatherForecast>();
+
+    [Parameter]
+    public WeatherForecast[] Forecasts
+    {
+        get => _forecasts;
+        set => _forecasts = value ?? Array.Empty<WeatherForecast>();
+    }
+}

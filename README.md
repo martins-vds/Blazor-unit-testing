@@ -1,1 +1,1 @@
-# Blazor-unit-testing
+# Blazor unit testing examples with [bUnit](https://github.com/egil/bunit) and [JustMock Lite](https://github.com/telerik/JustMockLite)

@@ -1,0 +1,39 @@
+﻿<div class="weather-forecast-detail">
+    @if (WeatherForecast != null)
+    {
+
+        <div class="row my-4">
+            <div class="col-sm-12">
+                <h3 class="h1">
+                    @WeatherForecast.Date.ToString("dd MMMM yyyy", new CultureInfo("en-US"))
+                </h3>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-sm-2">
+                <span class="small d-block text-muted">Temperature in Celsius</span>
+                @WeatherForecast.TemperatureC &deg;
+            </div>
+            <div class="col-sm-2">
+                <span class="small d-block text-muted">Temperature in Fahrenheit</span>
+                @WeatherForecast.TemperatureF &deg;
+            </div>
+            <div class="col-sm-2">
+                <span class="small d-block text-muted">Summary</span>
+                @WeatherForecast.Summary
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-primary" role="alert">
+            Please select a weather forecast to see its details.
+        </div>
+    }
+</div>
+
+@code {
+
+    [Parameter]
+    public WeatherForecast WeatherForecast { get; set; }
+}
