@@ -3,7 +3,7 @@ using BlazorDemoApp.Components;
 using BlazorDemoApp.Data;
 using BlazorDemoApp.Pages;
 using Bunit;
-using Bunit.Mocking.JSInterop;
+using Bunit.TestDoubles;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
@@ -13,13 +13,14 @@ using Xunit;
 
 namespace BlazorUnitTests
 {
-    public class Tests : ComponentTestFixture
+    public class Tests
     {
         [Fact]
         public void TestCounter()
-        {
+        {            
             // Arrange
-            var cut = RenderComponent<Counter>();
+            var ctx = new TestContext();
+            var cut = ctx.RenderComponent<Counter>();
             cut.Find("p").MarkupMatches("<p>Current count: 0</p>");
 
             // Act
@@ -34,16 +35,18 @@ namespace BlazorUnitTests
         public void TestFetchData_ForecastIsNull()
         {
             // Arrange
+            var ctx = new TestContext();
+
             var weatherForecastServiceMock = Mock.Create<IWeatherForecastService>();
             Mock.Arrange(() => weatherForecastServiceMock.GetForecastAsync(Arg.IsAny<DateTime>()))
                 .Returns(new TaskCompletionSource<WeatherForecast[]>().Task);
-            Services.AddSingleton<IWeatherForecastService>(weatherForecastServiceMock);
+            ctx.Services.AddSingleton<IWeatherForecastService>(weatherForecastServiceMock);
 
             // Act
-            var cut = RenderComponent<FetchData>();
+            var cut = ctx.RenderComponent<FetchData>();
 
             // Assert - that it renders the initial loading message
-            var initialExpectedHtml = 
+            var initialExpectedHtml =
                         @"<h1>Weather forecast</h1>
                         <p>This component demonstrates fetching data from a service.</p>
                         <p><em>Loading...</em></p>";
@@ -60,14 +63,15 @@ namespace BlazorUnitTests
             Mock.Arrange(() => weatherForecastServiceMock.GetForecastAsync(Arg.IsAny<DateTime>()))
                 .Returns(Task.FromResult<WeatherForecast[]>(forecasts));
 
-            Services.AddSingleton<IWeatherForecastService>(weatherForecastServiceMock);
+            var ctx = new TestContext();
+            ctx.Services.AddSingleton<IWeatherForecastService>(weatherForecastServiceMock);
 
             // Act - render the FetchData component
-            var cut = RenderComponent<FetchData>();
+            var cut = ctx.RenderComponent<FetchData>();
             var actualForcastDataTable = cut.FindComponent<ForecastDataTable>(); // find the component
 
             // Assert
-            var expectedDataTable = RenderComponent<ForecastDataTable>((nameof(ForecastDataTable.Forecasts), forecasts));
+            var expectedDataTable = ctx.RenderComponent<ForecastDataTable>((nameof(ForecastDataTable.Forecasts), forecasts));
             actualForcastDataTable.MarkupMatches(expectedDataTable.Markup);
         }
 
@@ -81,22 +85,23 @@ namespace BlazorUnitTests
             Mock.Arrange(() => weatherForecastServiceMock.GetForecastAsync(Arg.IsAny<DateTime>()))
                 .Returns(Task.FromResult<WeatherForecast[]>(forecasts));
 
-            Services.AddMockJsRuntime();
-            Services.AddSingleton<IWeatherForecastService>(weatherForecastServiceMock);
-            Services.AddTelerikBlazor();
+            var ctx = new TestContext();
+            ctx.JSInterop.Mode = JSRuntimeMode.Loose;
+            ctx.Services.AddSingleton<IWeatherForecastService>(weatherForecastServiceMock);
+            ctx.Services.AddTelerikBlazor();
 
             var rootComponentMock = Mock.Create<TelerikRootComponent>();
 
-            var cut = RenderComponent<MasterDetail>(
-                CascadingValue(rootComponentMock)
+            var cut = ctx.RenderComponent<MasterDetail>(parameters => parameters
+                .AddCascadingValue<TelerikRootComponent>(rootComponentMock)
             );
-            
+
             // Act
             IElement plusSymbol = cut.Find("tr.k-master-row td[data-col-index=\"0\"]");
             plusSymbol.Click();
 
             // Assert
-            var expectedForecastDetail = RenderComponent<WeatherForecastDetail>((nameof(WeatherForecastDetail.WeatherForecast), forecasts[0]));
+            var expectedForecastDetail = ctx.RenderComponent<WeatherForecastDetail>((nameof(WeatherForecastDetail.WeatherForecast), forecasts[0]));
 
             var actualForecastDetailElement = cut.FindComponent<WeatherForecastDetail>(); // find the component
             actualForecastDetailElement.MarkupMatches(expectedForecastDetail);
