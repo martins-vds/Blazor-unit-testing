@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Telerik.Recurrence.Trial</id>
+    <version>0.2.0</version>
+    <authors>Telerik.Recurrence</authors>
+    <iconUrl>http://www.telerik.com/sfimages/default-source/logos/progress-64x64.png</iconUrl>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>

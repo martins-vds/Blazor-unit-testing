@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Telerik.DataSource.Trial</id>
+    <version>2.1.1</version>
+    <authors>Progress</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://www.telerik.com/purchase/license-agreement/aspnet-mvc</licenseUrl>
+    <projectUrl>http://www.telerik.com/aspnet-mvc</projectUrl>
+    <iconUrl>http://www.telerik.com/sfimages/default-source/logos/datasource.png</iconUrl>
+    <description>Telerik DataSource provides datasource classes and extensions for sorting, paging, grouping and filtering collections on the server-side.</description>
+    <tags>aspnet mvc aspnext vnext</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Microsoft.CSharp" version="4.6.0" exclude="Build,Analyzers" />
+        <dependency id="System.Data.Common" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Queryable" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.Loader" version="4.3.0" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Json" version="4.7.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
