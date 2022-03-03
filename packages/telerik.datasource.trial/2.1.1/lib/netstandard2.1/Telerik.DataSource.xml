@@ -1,0 +1,1972 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.DataSource</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.DataSource.FilterCompositionLogicalOperator">
+            <summary>
+            Logical operator used for filter descriptor composition.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterCompositionLogicalOperator.And">
+            <summary>
+            Combines filters with logical AND.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterCompositionLogicalOperator.Or">
+            <summary>
+            Combines filters with logical OR.
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.FilterOperator">
+            <summary>
+            Operator used in <see cref="T:Telerik.DataSource.FilterDescriptor"/>
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsLessThan">
+            <summary>
+            Left operand must be smaller than the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsLessThanOrEqualTo">
+            <summary>
+            Left operand must be smaller than or equal to the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsEqualTo">
+            <summary>
+            Left operand must be equal to the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsNotEqualTo">
+            <summary>
+            Left operand must be different from the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsGreaterThanOrEqualTo">
+            <summary>
+            Left operand must be larger than the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsGreaterThan">
+            <summary>
+            Left operand must be larger than or equal to the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.StartsWith">
+            <summary>
+            Left operand must start with the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.EndsWith">
+            <summary>
+            Left operand must end with the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.Contains">
+            <summary>
+            Left operand must contain the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsContainedIn">
+            <summary>
+            Left operand must be contained in the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.DoesNotContain">
+            <summary>
+            Left operand must not contain the right one.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsNull">
+            <summary>
+            Operand is null.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsNotNull">
+            <summary>
+            Operand is not null.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsEmpty">
+            <summary>
+            Operand is empty.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsNotEmpty">
+            <summary>
+            Operand is not empty.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsNullOrEmpty">
+            <summary>
+            Operand is null or empty.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.FilterOperator.IsNotNullOrEmpty">
+            <summary>
+            Operand is not null or empty.
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.DataSourceRequest">
+            <summary>
+            Provides information about paging, sorting, filtering and grouping of data.
+            Usually created by a Telerik component and sent to a backend that will consume this data.
+            Often used together with the DataSourceResult class that can automatically perform the needed operations over the full set of data.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceRequest.Skip">
+            <summary>
+            The number of items to skip
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceRequest.Page">
+            <summary>
+            The current page.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceRequest.PageSize">
+            <summary>
+            The page size.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceRequest.Sorts">
+            <summary>
+            The sorting information for the data.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceRequest.Filters">
+            <summary>
+            The filtering information for the data.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceRequest.Groups">
+            <summary>
+            The grouping information for the data.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceRequest.Aggregates">
+            <summary>
+            The data aggregation.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceRequest.GroupPaging">
+            <summary>
+            Indicates whether group paging is enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.DataSourceResult">
+            <summary>
+            Represents the data response for complex controls like grids. Includes data, total, aggregates and errors.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceResult.Data">
+            <summary>
+            The actual data that will be displayed in the control. Often it is only the current page of data.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceResult.Total">
+            <summary>
+            The total number of records in the original data source. Used for calculating a pager, for example.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceResult.AggregateResults">
+            <summary>
+            Information for aggregates.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DataSourceResult.Errors">
+            <summary>
+            Information for errors that occured during the data source operation.
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.AggregateDescriptor">
+            <summary>
+            Describes an aggregate.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateDescriptor.Aggregates">
+            <summary>
+            A list of the aggregation functions.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateDescriptor.Member">
+            <summary>
+            The field over which aggregation is performed.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateDescriptor.Deserialize(System.String)">
+            <summary>
+            for internal use
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateDescriptor.DeserializeAggregate(System.String)">
+            <summary>
+            for internal use
+            </summary>
+            <param name="aggregate"></param>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateDescriptor.Serialize">
+            <summary>
+            for internal use
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.DataSource.ClientHandlerDescriptor">
+            <summary>
+            Represents a client-side event handler
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.ClientHandlerDescriptor.TemplateDelegate">
+            <summary>
+            A Razor template delegate.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.ClientHandlerDescriptor.HandlerName">
+            <summary>
+            The name of the JavaScript function which will be called as a handler.
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.CompositeFilterDescriptor">
+            <summary>
+            Represents a filtering descriptor which serves as a container for one or more child filtering descriptors.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.CompositeFilterDescriptor.LogicalOperator">
+            <summary>
+            Gets or sets the logical operator used for composing of <see cref="P:Telerik.DataSource.CompositeFilterDescriptor.FilterDescriptors"/>.
+            </summary>
+            <value>The logical operator used for composition.</value>
+        </member>
+        <member name="P:Telerik.DataSource.CompositeFilterDescriptor.FilterDescriptors">
+            <summary>
+            Gets or sets the filter descriptors that will be used for composition.
+            </summary>
+            <value>The filter descriptors used for composition.</value>
+        </member>
+        <member name="M:Telerik.DataSource.CompositeFilterDescriptor.CreateFilterExpression(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Creates a predicate filter expression combining <see cref="P:Telerik.DataSource.CompositeFilterDescriptor.FilterDescriptors"/> 
+            expressions with <see cref="P:Telerik.DataSource.CompositeFilterDescriptor.LogicalOperator"/>.
+            </summary>
+            <param name="parameterExpression">The parameter expression, which will be used for filtering.</param>
+            <returns>A predicate filter expression.</returns>
+        </member>
+        <member name="M:Telerik.DataSource.CompositeFilterDescriptor.Serialize(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            for internal use
+            </summary>
+            <param name="json"></param>
+        </member>
+        <member name="T:Telerik.DataSource.FilterDescriptor">
+            <summary>
+            Represents declarative filtering.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.FilterDescriptor"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptor.#ctor(System.String,Telerik.DataSource.FilterOperator,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.FilterDescriptor"/> class.
+            </summary>
+            <param name="member">The member.</param>
+            <param name="filterOperator">The filter operator.</param>
+            <param name="filterValue">The filter value.</param>
+        </member>
+        <member name="P:Telerik.DataSource.FilterDescriptor.Member">
+            <summary>
+            Gets or sets the member name which will be used for filtering.
+            </summary>
+            <filterValue>The member that will be used for filtering.</filterValue>
+        </member>
+        <member name="P:Telerik.DataSource.FilterDescriptor.MemberType">
+            <summary>
+            Gets or sets the type of the member that is used for filtering.
+            Set this property if the member type cannot be resolved automatically.
+            Such cases are: items with ICustomTypeDescriptor, XmlNode or DataRow.
+            Changing this property did not raise
+            </summary>
+            <value>The type of the member used for filtering.</value>
+            System.Text.Json cannot serialize System.Type: https://github.com/dotnet/runtime/issues/30820
+        </member>
+        <member name="P:Telerik.DataSource.FilterDescriptor.Operator">
+            <summary>
+            Gets or sets the filter operator.
+            </summary>
+            <filterValue>The filter operator.</filterValue>
+        </member>
+        <member name="P:Telerik.DataSource.FilterDescriptor.Value">
+            <summary>
+            Gets or sets the target filter value.
+            </summary>
+            <filterValue>The filter value.</filterValue>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptor.CreateFilterExpression(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Creates a predicate filter expression.
+            </summary>
+            <param name="parameterExpression">The parameter expression, which will be used for filtering.</param>
+            <returns>A predicate filter expression.</returns>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptor.Equals(Telerik.DataSource.FilterDescriptor)">
+            <summary>
+            Determines whether the specified <paramref name="other"/> descriptor
+            is equal to the current one.
+            </summary>
+            <param name="other">The other filter descriptor.</param>
+            <returns>
+            True if all members of the current descriptor are
+            equal to the ones of <paramref name="other"/>, otherwise false.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptor.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <paramref name="obj"/>
+            is equal to the current descriptor.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptor.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>
+            A hash code for the current filter descriptor.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptor.Serialize(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            for internal use
+            </summary>
+            <param name="json"></param>
+        </member>
+        <member name="T:Telerik.DataSource.FilterDescriptorBase">
+            <summary>
+            Base class for all <see cref="T:Telerik.DataSource.IFilterDescriptor"/> used for 
+            handling the logic for property changed notifications.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptorBase.CreateFilterExpression(System.Linq.Expressions.Expression)">
+            <summary>
+            Creates a filter expression by delegating its creation to 
+            <see cref="M:Telerik.DataSource.FilterDescriptorBase.CreateFilterExpression(System.Linq.Expressions.ParameterExpression)"/>, if 
+            <paramref name="instance"/> is <see cref="T:System.Linq.Expressions.ParameterExpression"/>, otherwise throws <see cref="T:System.ArgumentException"/>
+            </summary>
+            <param name="instance">The instance expression, which will be used for filtering.</param>
+            <returns>A predicate filter expression.</returns>
+            <exception cref="T:System.ArgumentException">Parameter should be of type <see cref="T:System.Linq.Expressions.ParameterExpression"/></exception>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptorBase.CreateFilterExpression(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Creates a predicate filter expression used for collection filtering.
+            </summary>
+            <param name="parameterExpression">The parameter expression, which will be used for filtering.</param>
+            <returns>A predicate filter expression.</returns>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptorBase.Serialize(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            for internal use
+            </summary>
+            <param name="json"></param>
+        </member>
+        <member name="T:Telerik.DataSource.FilterDescriptorCollection">
+            <summary>
+            Represents collection of <see cref="T:Telerik.DataSource.IFilterDescriptor"/>.
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.FilterDescriptorFactory">
+            <summary>
+            Creates a list of filter descriptors based on the provided string representation
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.GroupDescriptor">
+            <summary>
+            Represents grouping criteria.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.GroupDescriptor.MemberType">
+            <summary>
+            Gets or sets the type of the member that is used for grouping.
+            Set this property if the member type cannot be resolved automatically.
+            Such cases are: items with ICustomTypeDescriptor, XmlNode or DataRow.
+            </summary>
+            <value>The type of the member used for grouping.</value>
+        </member>
+        <member name="P:Telerik.DataSource.GroupDescriptor.DisplayContent">
+            <summary>
+            Gets or sets the content which will be used from UI.
+            Usually this is the indicator that the the component is grouped by this field
+            and it defaults to the field name. You can define
+            your own string to show there.
+            </summary>
+            <filterValue>The content that will be used from UI.</filterValue>
+        </member>
+        <member name="P:Telerik.DataSource.GroupDescriptor.AggregateFunctions">
+            <summary>
+            Gets the aggregate functions used when grouping is executed.
+            </summary>
+            <value>The aggregate functions that will be used in grouping.</value>
+        </member>
+        <member name="M:Telerik.DataSource.GroupDescriptor.CycleSortDirection">
+            <summary>
+            Changes the <see cref="T:Telerik.DataSource.SortDescriptor"/> to the next logical value.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.GroupDescriptor.Serialize(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            for internal use
+            </summary>
+            <param name="json"></param>
+        </member>
+        <member name="T:Telerik.DataSource.IFilterDescriptor">
+            <summary>
+            Represents a filtering abstraction that knows how to create predicate filtering expression.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.IFilterDescriptor.CreateFilterExpression(System.Linq.Expressions.Expression)">
+            <summary>
+            Creates a predicate filter expression used for collection filtering.
+            </summary>
+            <param name="instance">The instance expression, which will be used for filtering.</param>
+            <returns>A predicate filter expression.</returns>
+        </member>
+        <member name="T:Telerik.DataSource.JsonObject">
+            <summary>
+            Describes an object that is serializable to JSON
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.JsonObject.ToJson">
+            <summary>
+            Serializes the object instance to a dictionary through the Serialize method implementation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.JsonObject.Serialize(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Serializes the provided dictionary.
+            </summary>
+            <param name="json"></param>
+        </member>
+        <member name="T:Telerik.DataSource.ListSortDirection">
+            <summary>
+            Specifies the direction of a sort operation.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.ListSortDirection.Ascending">
+            <summary>
+            Sorts in ascending order.
+            </summary>
+        </member>
+        <member name="F:Telerik.DataSource.ListSortDirection.Descending">
+            <summary>
+            Sorts in descending order.
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.SortDescriptor">
+            <summary>
+            Represents declarative sorting.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.SortDescriptor.Member">
+            <summary>
+            Gets or sets the member name (field) which will be used.
+            </summary>
+            <filterValue>The member that will be used for sorting.</filterValue>
+        </member>
+        <member name="P:Telerik.DataSource.SortDescriptor.SortDirection">
+            <summary>
+            Gets or sets the sort direction for this sort descriptor. If the value is null
+            no sorting will be applied.
+            </summary>
+            <value>The sort direction. The default value is null.</value>
+        </member>
+        <member name="P:Telerik.DataSource.SortDescriptor.SortCompare">
+            <summary>
+            Gets or sets the sort compare for this sort descriptor.
+            Applicable only for jQuery-based widgets such as UI for ASP.NET MVC.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.SortDescriptor.Deserialize(System.String)">
+            <summary>
+            for internal use
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:Telerik.DataSource.SortDescriptor.Serialize">
+            <summary>
+            for internal use
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.SortDescriptor.Serialize(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            for internal use
+            </summary>
+            <param name="json"></param>
+        </member>
+        <member name="T:Telerik.DataSource.Extensions.CollectionExtensions">
+            <summary>
+            Extensions methods for working with collections
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.CollectionExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Adds an enumerable collection to another collection.
+            </summary>
+            <typeparam name="T">the type of the collections</typeparam>
+            <param name="instance">the collection to add items to</param>
+            <param name="collection">the collection that will be added to the original collection</param>
+        </member>
+        <member name="T:Telerik.DataSource.Extensions.EnumerableExtensions">
+            <summary>
+            Extension methods for working with enumerable collections.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.EnumerableExtensions.GenericEnumerable`1.#ctor(System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.Extensions.EnumerableExtensions.GenericEnumerable`1"/> class.
+            </summary>
+            <param name="source">The source.</param>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.EnumerableExtensions.Each``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            Invokes an action for each item of the collection
+            </summary>
+            <typeparam name="T">the type of the collection</typeparam>
+            <param name="instance">the collection that will be looped</param>
+            <param name="action">the action that will be called for each item in the collection</param>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.EnumerableExtensions.Each``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Executes the provided delegate for each item.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance">The instance.</param>
+            <param name="action">The action to be applied.</param>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.EnumerableExtensions.AsGenericEnumerable(System.Collections.IEnumerable)">
+            <summary>
+            Makes a generic enumerable collection from the provided collection
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.EnumerableExtensions.IndexOf(System.Collections.IEnumerable,System.Object)">
+            <summary>
+            Returns the index at which an element is met in a collection. Returns -1 if the element is not in the collection.
+            </summary>
+            <param name="source"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.EnumerableExtensions.ElementAt(System.Collections.IEnumerable,System.Int32)">
+            <exception cref="T:System.ArgumentOutOfRangeException"><c>index</c> is out of range.</exception>
+            <summary>Returns the item from the collection at the given index. Returns null if the collection has fewer items than the passed index.</summary>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.EnumerableExtensions.ToReadOnlyCollection``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Creates a read only collection from the provided source.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sequence"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.DataSource.Extensions.JsonObjectExtensions">
+            <summary>
+            Extension methods for working with the JsonObject class.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.JsonObjectExtensions.ToJson(System.Collections.Generic.IEnumerable{Telerik.DataSource.JsonObject})">
+            <summary>
+            Serializes the collection of JsonObject instances to a collection of dictionaries.
+            </summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.JsonObjectExtensions.ConvertPropertyName(System.Text.Json.JsonSerializerOptions,System.String)">
+            <summary>
+               converts the specified name according to the policy, such as camel-casing.
+            </summary>
+            <param name="options"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.DataSource.Extensions.QueryableExtensions">
+            <summary>
+            Provides extension methods to process DataSourceRequest.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.ToDataSourceResult(System.Data.DataTable,Telerik.DataSource.DataSourceRequest)">
+            <summary>
+            Applies paging, sorting, filtering and grouping using the information from the DataSourceRequest object.
+            If the collection is already paged, the method returns an empty resullt.
+            </summary>
+            <param name="dataTable">An instance of <see cref="T:System.Data.DataTable" />.</param>
+            <param name="request">An instance of <see cref="T:Telerik.DataSource.DataSourceRequest" />.</param>
+            <returns>
+            A <see cref="T:Telerik.DataSource.DataSourceResult" /> object, which contains the processed data after
+            paging, sorting, filtering and grouping are applied.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.ToDataSourceResultAsync(System.Data.DataTable,Telerik.DataSource.DataSourceRequest)">
+            <summary>
+            Applies paging, sorting, filtering and grouping using the information from the DataSourceRequest object.
+            If the collection is already paged, the method returns an empty resullt.
+            </summary>
+            <param name="dataTable">An instance of <see cref="T:System.Data.DataTable" />.</param>
+            <param name="request">An instance of <see cref="T:Telerik.DataSource.DataSourceRequest" />.</param>
+            <returns>
+            A Task of <see cref="T:Telerik.DataSource.DataSourceResult" /> object, which contains the processed data after
+            paging, sorting, filtering and grouping are applied.
+            It can be called with the "await" keyword for asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.ToDataSourceResult(System.Collections.IEnumerable,Telerik.DataSource.DataSourceRequest)">
+            <summary>
+            Applies paging, sorting, filtering and grouping using the information from the DataSourceRequest object.
+            If the collection is already paged, the method returns an empty result.
+            </summary>
+            <param name="enumerable">An instance of <see cref="T:System.Collections.IEnumerable" />.</param>
+            <param name="request">An instance of <see cref="T:Telerik.DataSource.DataSourceRequest" />.</param>
+            <returns>
+            A <see cref="T:Telerik.DataSource.DataSourceResult" /> object, which contains the processed data after
+            paging, sorting, filtering and grouping are applied.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.ToDataSourceResultAsync(System.Collections.IEnumerable,Telerik.DataSource.DataSourceRequest)">
+            <summary>
+            Applies paging, sorting, filtering and grouping using the information from the DataSourceRequest object.
+            If the collection is already paged, the method returns an empty result.
+            </summary>
+            <param name="enumerable">An instance of <see cref="T:System.Collections.IEnumerable" />.</param>
+            <param name="request">An instance of <see cref="T:Telerik.DataSource.DataSourceRequest" />.</param>
+            <returns>
+            A Task of <see cref="T:Telerik.DataSource.DataSourceResult" /> object, which contains the processed data
+            after paging, sorting, filtering and grouping are applied.
+            It can be called with the "await" keyword for asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.ToDataSourceResult(System.Linq.IQueryable,Telerik.DataSource.DataSourceRequest)">
+            <summary>
+            Applies paging, sorting, filtering and grouping using the information from the DataSourceRequest object.
+            If the collection is already paged, the method returns an empty result.
+            </summary>
+            <param name="queryable">An instance of <see cref="T:System.Linq.IQueryable" />.</param>
+            <param name="request">An instance of <see cref="T:Telerik.DataSource.DataSourceRequest" />.</param>
+            <returns>
+            A <see cref="T:Telerik.DataSource.DataSourceResult" /> object, which contains the processed data after paging, sorting, filtering and grouping are applied.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.ToDataSourceResultAsync(System.Linq.IQueryable,Telerik.DataSource.DataSourceRequest)">
+            <summary>
+            Applies paging, sorting, filtering and grouping using the information from the DataSourceRequest object.
+            If the collection is already paged, the method returns an empty result.
+            </summary>
+            <param name="queryable">An instance of <see cref="T:System.Linq.IQueryable" />.</param>
+            <param name="request">An instance of <see cref="T:Telerik.DataSource.DataSourceRequest" />.</param>
+            <returns>
+            A Task of <see cref="T:Telerik.DataSource.DataSourceResult" /> object, which contains the processed data
+            after paging, sorting, filtering and grouping are applied.
+            It can be called with the "await" keyword for asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Sort(System.Linq.IQueryable,System.Collections.Generic.IEnumerable{Telerik.DataSource.SortDescriptor})">
+            <summary>
+            Sorts the elements of a sequence using the specified sort descriptors.
+            </summary>
+            <param name="source">A sequence of values to sort.</param>
+            <param name="sortDescriptors">The sort descriptors used for sorting.</param>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> whose elements are sorted according to a <paramref name="sortDescriptors"/>.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Page(System.Linq.IQueryable,System.Int32,System.Int32)">
+            <summary>
+            Pages through the elements of a sequence until the specified
+            <paramref name="pageIndex"/> using <paramref name="pageSize"/>.
+            </summary>
+            <param name="source">A sequence of values to page.</param>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageSize">Size of the page.</param>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> whose elements are at the specified <paramref name="pageIndex"/>.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Select(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)">
+            <summary>
+            Projects each element of a sequence into a new form.
+            </summary>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> whose elements are the result of invoking a
+            projection selector on each element of <paramref name="source" />.
+            </returns>
+            <param name="source"> A sequence of values to project. </param>
+            <param name="selector"> A projection function to apply to each element. </param>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.GroupBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)">
+            <summary>
+            Groups the elements of a sequence according to a specified key selector function.
+            </summary>
+            <param name="source"> An <see cref="T:System.Linq.IQueryable" /> whose elements to group.</param>
+            <param name="keySelector"> A function to extract the key for each element.</param>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable"/> with <see cref="T:System.Linq.IGrouping`2"/> items,
+            whose elements contains a sequence of objects and a key.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)">
+            <summary>
+            Sorts the elements of a sequence in ascending order according to a key.
+            </summary>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> whose elements are sorted according to a key.
+            </returns>
+            <param name="source">
+            A sequence of values to order.
+            </param>
+            <param name="keySelector">
+            A function to extract a key from an element.
+            </param>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.OrderByDescending(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)">
+            <summary>
+            Sorts the elements of a sequence in descending order according to a key.
+            </summary>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> whose elements are sorted in descending order according to a key.
+            </returns>
+            <param name="source">
+            A sequence of values to order.
+            </param>
+            <param name="keySelector">
+            A function to extract a key from an element.
+            </param>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression,System.Nullable{Telerik.DataSource.ListSortDirection})">
+            <summary>
+            Calls <see cref="M:Telerik.DataSource.Extensions.QueryableExtensions.OrderBy(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)"/>
+            or <see cref="M:Telerik.DataSource.Extensions.QueryableExtensions.OrderByDescending(System.Linq.IQueryable,System.Linq.Expressions.LambdaExpression)"/> depending on the <paramref name="sortDirection"/>.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="keySelector">The key selector.</param>
+            <param name="sortDirection">The sort direction.</param>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> whose elements are sorted according to a key.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.GroupBy(System.Linq.IQueryable,System.Collections.Generic.IEnumerable{Telerik.DataSource.GroupDescriptor},System.Boolean)">
+            <summary>
+            Groups the elements of a sequence according to a specified <paramref name="groupDescriptors"/>.
+            </summary>
+            <param name="source"> An <see cref="T:System.Linq.IQueryable" /> whose elements to group. </param>
+            <param name="groupDescriptors">The group descriptors used for grouping.</param>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable"/> with <see cref="T:Telerik.DataSource.IGroup"/> items,
+            whose elements contains a sequence of objects and a key.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Aggregate(System.Linq.IQueryable,System.Collections.Generic.IEnumerable{Telerik.DataSource.AggregateFunction})">
+            <summary>
+            Calculates the results of given aggregates functions on a sequence of elements.
+            </summary>
+            <param name="source"> An <see cref="T:System.Linq.IQueryable" /> whose elements will
+            be used for aggregate calculation.</param>
+            <param name="aggregateFunctions">The aggregate functions.</param>
+            <returns>Collection of <see cref="T:Telerik.DataSource.AggregateResult"/>s calculated for each function.</returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Where(System.Linq.IQueryable,System.Linq.Expressions.Expression)">
+            <summary>
+            Filters a sequence of values based on a predicate.
+            </summary>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> that contains elements from the input sequence
+            that satisfy the condition specified by <paramref name="predicate" />.
+            </returns>
+            <param name="source"> An <see cref="T:System.Linq.IQueryable" /> to filter.</param>
+            <param name="predicate"> A function to test each element for a condition.</param>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Where(System.Linq.IQueryable,System.Collections.Generic.IEnumerable{Telerik.DataSource.IFilterDescriptor})">
+            <summary>
+            Filters a sequence of values based on a collection of <see cref="T:Telerik.DataSource.IFilterDescriptor"/>.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="filterDescriptors">The filter descriptors.</param>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> that contains elements from the input sequence
+            that satisfy the conditions specified by each filter descriptor in <paramref name="filterDescriptors" />.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Take(System.Linq.IQueryable,System.Int32)">
+            <summary>
+            Returns a specified number of contiguous elements from the start of a sequence.
+            </summary>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> that contains the specified number
+            of elements from the start of <paramref name="source" />.
+            </returns>
+            <param name="source"> The sequence to return elements from.</param>
+            <param name="count"> The number of elements to return. </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="source" /> is null. </exception>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Skip(System.Linq.IQueryable,System.Int32)">
+            <summary>
+            Bypasses a specified number of elements in a sequence
+            and then returns the remaining elements.
+            </summary>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> that contains elements that occur
+            after the specified index in the input sequence.
+            </returns>
+            <param name="source">
+            An <see cref="T:System.Linq.IQueryable" /> to return elements from.
+            </param>
+            <param name="count">
+            The number of elements to skip before returning the remaining elements.
+            </param>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="source" /> is null.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Count(System.Linq.IQueryable)">
+            <summary> Returns the number of elements in a sequence.</summary>
+            <returns> The number of elements in the input sequence.</returns>
+            <param name="source">
+            The <see cref="T:System.Linq.IQueryable" /> that contains the elements to be counted.
+            </param>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="source" /> is null.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.ElementAt(System.Linq.IQueryable,System.Int32)">
+            <summary> Returns the element at a specified index in a sequence.</summary>
+            <returns> The element at the specified position in <paramref name="source" />.</returns>
+            <param name="source"> An <see cref="T:System.Linq.IQueryable" /> to return an element from.</param>
+            <param name="index"> The zero-based index of the element to retrieve.</param>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="source" /> is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"> <paramref name="index" /> is less than zero.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.QueryableExtensions.Union(System.Linq.IQueryable,System.Linq.IQueryable)">
+            <summary>
+            Produces the set union of two sequences by using the default equality comparer.
+            </summary>
+            <returns>
+            An <see cref="T:System.Linq.IQueryable" /> that contains the elements from both input sequences, excluding duplicates.
+            </returns>
+            <param name="source">
+            An <see cref="T:System.Linq.IQueryable" /> whose distinct elements form the first set for the union.
+            </param>
+            <param name="second">
+            An <see cref="T:System.Linq.IQueryable" /> whose distinct elements form the first set for the union.
+            </param>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="source" /> is null.</exception>
+        </member>
+        <member name="T:Telerik.DataSource.Extensions.StringExtensions">
+            <summary>
+            Extension methods for working with strings
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.FormatWith(System.String,System.Object[])">
+            <summary>
+            Replaces the format item in a specified System.String with the text equivalent of the value of a corresponding System.Object instance in a specified array.
+            </summary>
+            <param name="instance">A string to format.</param>
+            <param name="args">An System.Object array containing zero or more objects to format.</param>
+            <returns>A copy of format in which the format items have been replaced by the System.String equivalent of the corresponding instances of System.Object in args.</returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.IsCaseSensitiveEqual(System.String,System.String)">
+            <summary>
+            Determines whether this instance and another specified System.String object have the same value.
+            </summary>
+            <param name="instance">The string to check equality.</param>
+            <param name="comparing">The comparing with string.</param>
+            <returns>
+            <c>true</c> if the value of the comparing parameter is the same as this string; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.IsCaseInsensitiveEqual(System.String,System.String)">
+            <summary>
+            Determines whether this instance and another specified System.String object have the same value.
+            </summary>
+            <param name="instance">The string to check equality.</param>
+            <param name="comparing">The comparing with string.</param>
+            <returns>
+            <c>true</c> if the value of the comparing parameter is the same as this string; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.ToCamelCase(System.String)">
+            <summary>
+            Returns the string in camelCase casing
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.AsTitle(System.String)">
+            <summary>
+            Returns the string In Title Case Formatting
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.ToEnum``1(System.String,``0)">
+            <summary>
+            Returns the enum member the string parses to
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.SplitPascalCase(System.String)">
+            <summary>
+            Splits a string to space-separated words in Pascal Case
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.JavaScriptStringEncode(System.String,System.Boolean)">
+            <summary>
+            Escapes a string for JavaScript by wrapping it in \" symbols if true is passed, otherwise returns the original string.
+            </summary>
+            <param name="value"></param>
+            <param name="addDoubleQuotes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.StringExtensions.JavaScriptStringEncode(System.String)">
+            <summary>
+            Escapes a string for use in JavaScript
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.DataSource.Extensions.TypeExtensions">
+            <summary>
+            Extension methods for working with types
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsPredefinedType(System.Type)">
+            <summary>
+            Returns true if the type is one of the standard .NET types
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsGenericType(System.Type)">
+            <summary>
+            Returns true if the type is generic
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsInterface(System.Type)">
+            <summary>
+            Returns true if the type is an interface
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsDynamicObject(System.Type)">
+            <summary>
+            Returns true if the object is dynamic
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsNullableType(System.Type)">
+            <summary>
+            Returns true if the type is nullable
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.GetNonNullableType(System.Type)">
+            <summary>
+            Returns the non-nullable type for the type that is passed.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsValueType(System.Type)">
+            <summary>
+            Returns true if the type is a Value type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.GetTypeName(System.Type)">
+            <summary>
+            Returns the name of the type as a string
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsCompatibleWith(System.Type,System.Type)">
+            <summary>
+            Returns true if the source can be assigned to the target
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.DefaultValue(System.Type)">
+            <summary>
+            Returns the default value of the given type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsEnumType(System.Type)">
+            <summary>
+            Returns true if the type is an enumeration
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsNumericType(System.Type)">
+            <summary>
+            Returns true if the type is a number type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.ToJavaScriptType(System.Type)">
+            <summary>
+            Returns a string that is the matching JavaScript type of the given object
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.Extensions.TypeExtensions.IsPlainType(System.Type)">
+            <summary>
+            Returns true if the object is plain (that is, not dynamic)
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.DataSource.Resources.Exceptions">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ArrayCannotBeEmpty">
+            <summary>
+              Looks up a localized string similar to &quot;{0}&quot; array cannot be empty..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.BatchUpdatesRequireInCellMode">
+            <summary>
+              Looks up a localized string similar to You must use InCell edit mode for batch updates..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.BatchUpdatesRequireUpdate">
+            <summary>
+              Looks up a localized string similar to The Update data binding setting is required for batch updates. Please specify the Update action or url in the DataBinding configuration..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotBeNegative">
+            <summary>
+              Looks up a localized string similar to &quot;{0}&quot; cannot be negative..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotBeNegativeOrZero">
+            <summary>
+              Looks up a localized string similar to &quot;{0}&quot; cannot be negative or zero..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotBeNull">
+            <summary>
+              Looks up a localized string similar to &quot;{0}&quot; cannot be null..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotBeNullOrEmpty">
+            <summary>
+              Looks up a localized string similar to &quot;{0}&quot; cannot be null or empty..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotFindPropertyToSortBy">
+            <summary>
+              Looks up a localized string similar to Cannot find a public property of primitive type to sort by..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotHaveMoreOneColumnInOrderWhenSortModeIsSetToSingleColumn">
+            <summary>
+              Looks up a localized string similar to Cannot have more one column in order when sort mode is set to single column..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotRouteToClassNamedController">
+            <summary>
+              Looks up a localized string similar to Cannot route to class named &apos;Controller&apos;..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotSetAutoBindIfBoundDuringInitialization">
+            <summary>
+              Looks up a localized string similar to Cannot set AutoBind if widget is populated during initialization.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotUseAjaxAndWebServiceAtTheSameTime">
+            <summary>
+              Looks up a localized string similar to Cannot use Ajax and WebService binding at the same time..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotUseDetailTemplateAndLockedColumns">
+            <summary>
+              Looks up a localized string similar to Cannot use both Detail template and locked columns.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotUseLockedColumnsAndServerBinding">
+            <summary>
+              Looks up a localized string similar to Locked columns are not supported in server binding mode.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotUsePushStateWithServerNavigation">
+            <summary>
+              Looks up a localized string similar to Cannot use PushState with server navigation..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotUseRowTemplateAndLockedColumns">
+            <summary>
+              Looks up a localized string similar to Cannot use both Row template and locked columns.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotUseTemplatesInAjaxOrWebService">
+            <summary>
+              Looks up a localized string similar to Cannot use only server templates in Ajax or WebService binding mode. Please specify a client template as well..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CannotUseVirtualScrollWithServerBinding">
+            <summary>
+              Looks up a localized string similar to Cannot use Virtual Scroll with Server binding..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CollectionCannotBeEmpty">
+            <summary>
+              Looks up a localized string similar to &quot;{0}&quot; collection cannot be empty..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ControllerNameAmbiguousWithoutRouteUrl">
+             <summary>
+               Looks up a localized string similar to Multiple types were found that match the controller named &apos;{0}&apos;. This can happen if the route that services this request does not specify namespaces to search for a controller that matches the request. If this is the case, register this route by calling an overload of the &apos;MapRoute&apos; method that takes a &apos;namespaces&apos; parameter.
+            
+            The request for &apos;{0}&apos; has found the following matching controllers:{1}.
+             </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ControllerNameAmbiguousWithRouteUrl">
+             <summary>
+               Looks up a localized string similar to Multiple types were found that match the controller named &apos;{0}&apos;. This can happen if the route that services this request (&apos;{1}&apos;) does not specify namespaces to search for a controller that matches the request. If this is the case, register this route by calling an overload of the &apos;MapRoute&apos; method that takes a &apos;namespaces&apos; parameter.
+            
+            The request for &apos;{0}&apos; has found the following matching controllers:{2}.
+             </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ControllerNameMustEndWithController">
+            <summary>
+              Looks up a localized string similar to Controller name must end with &apos;Controller&apos;..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.CustomCommandRoutesWithAjaxBinding">
+            <summary>
+              Looks up a localized string similar to Custom command routes is available only for server binding..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.DataKeysEmpty">
+            <summary>
+              Looks up a localized string similar to There is no DataSource Model Id property specified..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.DataTableInLineEditingWithCustomEditorTemplates">
+            <summary>
+              Looks up a localized string similar to DataTable InLine editing and custom EditorTemplate per column is not supported.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.DataTablePopUpTemplate">
+            <summary>
+              Looks up a localized string similar to You must specify TemplateName when PopUp edit mode is enabled with DataTable binding.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.DeleteCommandRequiresDelete">
+            <summary>
+              Looks up a localized string similar to The Delete data binding setting is required by the delete command. Please specify the Delete action or url in the DataBinding configuration..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.EditCommandRequiresUpdate">
+            <summary>
+              Looks up a localized string similar to The Update data binding setting is required by the edit command. Please specify the Update action or url in the DataBinding configuration..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ExcelExportNotSupportedInServerBinding">
+            <summary>
+              Looks up a localized string similar to Excel export is not supported in server binding mode..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.FirstPropertyShouldNotBeBiggerThenSecondProperty">
+            <summary>
+              Looks up a localized string similar to {0} should not be bigger then {1}..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.GroupWithSpecifiedNameAlreadyExists">
+            <summary>
+              Looks up a localized string similar to Group with specified name already exists..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.GroupWithSpecifiedNameAlreadyExistsPleaseSpecifyADifferentName">
+            <summary>
+              Looks up a localized string similar to Group with specified name &quot;{0}&quot; already exists. Please specify a different name..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.GroupWithSpecifiedNameDoesNotExistInAssetTypeOfSharedWebAssets">
+            <summary>
+              Looks up a localized string similar to Group with &quot;{0}&quot; does not exist in {1} SharedWebAssets..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.GroupWithSpecifiedNameDoesNotExistPleaseMakeSureYouHaveSpecifiedACorrectName">
+            <summary>
+              Looks up a localized string similar to Group with specified name &quot;{0}&quot; does not exist. Please make sure you have specified a correct name..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.InCellModeNotSupportedInServerBinding">
+            <summary>
+              Looks up a localized string similar to InCell editing mode is not supported in server binding mode.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.InCellModeNotSupportedWithRowTemplate">
+            <summary>
+              Looks up a localized string similar to InCell editing mode is not supported when ClientRowTemplate is used.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.IndexOutOfRange">
+            <summary>
+              Looks up a localized string similar to Provided index is out of range..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.InsertCommandRequiresInsert">
+            <summary>
+              Looks up a localized string similar to The Insert data binding setting is required by the insert command. Please specify the Insert action or url in the DataBinding configuration..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ItemWithSpecifiedSourceAlreadyExists">
+            <summary>
+              Looks up a localized string similar to Item with specified source already exists..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.LocalGroupWithSpecifiedNameAlreadyExists">
+            <summary>
+              Looks up a localized string similar to Local group with name &quot;{0}&quot; already exists..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.LocalizationKeyNotFound">
+            <summary>
+              Looks up a localized string similar to The key with the following name &quot;{0}&quot; was not found. Please update all localization files..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.MemberExpressionRequired">
+            <summary>
+              Looks up a localized string similar to Bound columns require a field or property access expression..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.MinPropertyMustBeLessThenMaxProperty">
+            <summary>
+              Looks up a localized string similar to {0} should be less than {1}..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.NameCannotBeBlank">
+            <summary>
+              Looks up a localized string similar to Name cannot be blank..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.NameCannotContainSpaces">
+            <summary>
+              Looks up a localized string similar to Name cannot contain spaces..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.NoneIsOnlyUsedForInternalPurpose">
+            <summary>
+              Looks up a localized string similar to &quot;None&quot; is only used for internal purpose..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.OnlyOneScriptRegistrarIsAllowedInASingleRequest">
+            <summary>
+              Looks up a localized string similar to Only one ScriptRegistrar is allowed in a single request..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.OnlyOneStyleSheetRegistrarIsAllowedInASingleRequest">
+            <summary>
+              Looks up a localized string similar to Only one StyleSheetRegistrar is allowed in a single request..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.OnlyPropertyAndFieldExpressionsAreSupported">
+            <summary>
+              Looks up a localized string similar to Only property and field expressions are supported.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.Pager_Of">
+            <summary>
+              Looks up a localized string similar to of {0}.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.PagingMustBeEnabledToUsePageOnScroll">
+            <summary>
+              Looks up a localized string similar to Paging must be enabled to use PageOnScroll..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.PropertyMustBeBiggerThenZero">
+            <summary>
+              Looks up a localized string similar to The {0} must be bigger then 0..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.PropertyMustBePositiveNumber">
+            <summary>
+              Looks up a localized string similar to {0} must be positive number..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.PropertyShouldBeInRange">
+            <summary>
+              Looks up a localized string similar to {0} should be bigger than {1} and less then {2}.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.Rtl">
+            <summary>
+              Looks up a localized string similar to The &quot;{0}&quot; class is no longer supported. To enable RTL support you must include telerik.rtl.css and apply the &quot;t-rtl&quot; class to a parent HTML element or the &lt;body&gt;..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ScrollingMustBeEnabledToUsePageOnScroll">
+            <summary>
+              Looks up a localized string similar to Scrolling must be enabled to use PageOnScroll..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.SiteMapShouldBeDefinedInViewData">
+            <summary>
+              Looks up a localized string similar to You must have SiteMap defined with key &quot;{0}&quot; in ViewData dictionary..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.SourceMustBeAVirtualPathWhichShouldStartsWithTileAndSlash">
+            <summary>
+              Looks up a localized string similar to Source must be a virtual path which should starts with &quot;~/&quot;.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.SpecifiedFileDoesNotExist">
+            <summary>
+              Looks up a localized string similar to Specified file does not exist: &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.StringNotCorrectDate">
+            <summary>
+              Looks up a localized string similar to Passed string cannot be parsed to DateTime object..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.StringNotCorrectTimeSpan">
+            <summary>
+              Looks up a localized string similar to Passed string cannot be parsed to TimeSpan object..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.TheSpecifiedMethodIsNotAnActionMethod">
+            <summary>
+              Looks up a localized string similar to The specified method is not an action method..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.TimeOutOfRange">
+            <summary>
+              Looks up a localized string similar to Time should be bigger than MinTime and less than MaxTime..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.TooltipContainerShouldBeSet">
+            <summary>
+              Looks up a localized string similar to You should set Tooltip container. Tooltip.For(container).
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.UrlAndContentUrlCannotBeSet">
+            <summary>
+              Looks up a localized string similar to You cannot set Url and ContentUrl at the same time..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.ValueNotValidForProperty">
+            <summary>
+              Looks up a localized string similar to The value &apos;{0}&apos; is invalid..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.WebServiceUrlRequired">
+            <summary>
+              Looks up a localized string similar to The Url of the WebService must be set.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.YouCannotAddMoreThanOnceColumnWhenSortModeIsSetToSingle">
+            <summary>
+              Looks up a localized string similar to You cannot add more than once column when sort mode is set to single column..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.YouCannotCallBindToWithoutCustomBinding">
+            <summary>
+              Looks up a localized string similar to You cannot use non generic BindTo overload without EnableCustomBinding set to true.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.YouCannotCallRenderMoreThanOnce">
+            <summary>
+              Looks up a localized string similar to You cannot call render more than once..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.YouCannotCallStartMoreThanOnce">
+            <summary>
+              Looks up a localized string similar to You cannot call Start more than once..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.YouCannotConfigureASharedWebAssetGroup">
+            <summary>
+              Looks up a localized string similar to You cannot configure a shared web asset group..
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Resources.Exceptions.YouMustHaveToCallStartPriorCallingThisMethod">
+            <summary>
+              Looks up a localized string similar to You must have to call Start prior calling this method..
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.ClassFactory">
+            <summary>
+            Internal helper class used to generate dynamic classes
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.DynamicProperty">
+            <summary>
+            Class that describes a dynamic property
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DynamicProperty.Name">
+            <summary>
+            The name of the property
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.DynamicProperty.Type">
+            <summary>
+            The type of the dynamic property
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Expressions.ExpressionBuilderOptions.LiftMemberAccessToNull">
+            <summary>
+            Gets or sets a value indicating whether member access expression used
+            by this builder should be lifted to null. The default value is true;
+            </summary>
+            <value>
+                <c>true</c> if member access should be lifted to null; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.ExpressionFactory.LiftStringExpressionToEmpty(System.Linq.Expressions.Expression)">
+            <exception cref="T:System.ArgumentException">Provided expression should have string type</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.FilterDescriptorExpressionBuilder.CreateBodyExpression">
+            <exception cref="T:System.ArgumentException"><c>ArgumentException</c>.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.FilterExpressionBuilder.CreateFilterExpression">
+            <exception cref="T:System.ArgumentException"><c>ArgumentException</c>.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.AggregateFunctionExpressionBuilderBase.#ctor(System.Linq.Expressions.Expression,Telerik.DataSource.AggregateFunction)">
+            <exception cref="T:System.ArgumentException">
+            Provided <paramref name="enumerableExpression"/>'s <see cref="P:System.Linq.Expressions.Expression.Type"/> is not <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.AggregateFunctionExpressionBuilderBase.ExtractItemTypeFromEnumerableType(System.Type)">
+            <exception cref="T:System.ArgumentException">Provided type is not <see cref="T:System.Collections.Generic.IEnumerable`1"/></exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.EnumerableAggregateFunctionExpressionBuilder.#ctor(System.Linq.Expressions.Expression,Telerik.DataSource.EnumerableAggregateFunction)">
+            <exception cref="T:System.ArgumentException">
+            Provided <paramref name="enumerableExpression"/>'s <see cref="P:System.Linq.Expressions.Expression.Type"/> is not <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.EnumerableSelectorAggregateFunctionExpressionBuilder.#ctor(System.Linq.Expressions.Expression,Telerik.DataSource.EnumerableSelectorAggregateFunction)">
+            <exception cref="T:System.ArgumentException">
+            Provided <paramref name="enumerableExpression"/>'s <see cref="P:System.Linq.Expressions.Expression.Type"/> is not <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </exception>
+        </member>
+        <member name="T:Telerik.DataSource.Expressions.CustomTypeDescriptorExtensions">
+            <exclude/>
+            <excludeToc/>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.CustomTypeDescriptorExtensions.Property``1(System.ComponentModel.ICustomTypeDescriptor,System.String)">
+            <exception cref="T:System.ArgumentException"><c>ArgumentException</c>.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.CustomTypeDescriptorPropertyAccessExpressionBuilder.#ctor(System.Type,System.Type,System.String)">
+            <exception cref="T:System.ArgumentException"><paramref name="elementType"/> did not implement <see cref="T:System.ComponentModel.ICustomTypeDescriptor"/>.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.MemberAccessTokenExtensions.CreateMemberAccessExpression(Telerik.DataSource.Expressions.IMemberAccessToken,System.Linq.Expressions.Expression)">
+            <exception cref="T:System.ArgumentException">
+            Invalid name for property or field; or indexer with the specified arguments.
+            </exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.MemberAccessTokenExtensions.GetMemberInfoForType(Telerik.DataSource.Expressions.IMemberAccessToken,System.Type)">
+            <exception cref="T:System.InvalidOperationException"><c>InvalidOperationException</c>.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.UnboxT`1.ValueField(System.Object)">
+            <exception cref="T:System.InvalidCastException"><c>InvalidCastException</c>.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.XmlNodeExtensions.ChildElementInnerText(System.Xml.XmlNode,System.String)">
+            <exception cref="T:System.ArgumentException">
+            Child element with name specified by <paramref name="childName"/> does not exists.
+            </exception>
+        </member>
+        <member name="M:Telerik.DataSource.Expressions.FilterOperatorExtensions.CreateExpression(Telerik.DataSource.FilterOperator,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Boolean)">
+            <exception cref="T:System.InvalidOperationException"><c>InvalidOperationException</c>.</exception>
+        </member>
+        <member name="T:Telerik.DataSource.FilterDescription">
+            <summary>
+            Describes a filter descriptor
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescription.SatisfiesFilter(System.Object)">
+            <summary>
+            The method checks whether the passed parameter satisfies filter criteria. 
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.FilterDescription.IsActive">
+            <summary>
+            If false <see cref="M:Telerik.DataSource.FilterDescription.SatisfiesFilter(System.Object)"/> will not execute.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescription.CreateFilterExpression(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Creates a predicate filter expression that calls <see cref="M:Telerik.DataSource.FilterDescription.SatisfiesFilter(System.Object)"/>.
+            </summary>
+            <param name="parameterExpression">The parameter expression, which parameter 
+            will be passed to <see cref="M:Telerik.DataSource.FilterDescription.SatisfiesFilter(System.Object)"/> method.</param>
+        </member>
+        <member name="T:Telerik.DataSource.FilterDescriptorExtensions">
+            <summary>
+            Extensions for the filter descriptors
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptorExtensions.SelectMemberDescriptors(System.Collections.Generic.IEnumerable{Telerik.DataSource.IFilterDescriptor})">
+            <summary>
+            Returns all the filter descriptors incluiding the child items
+            </summary>
+            <param name="descriptors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptorExtensions.SetMemberTypeFrom(Telerik.DataSource.FilterDescriptor,System.Object)">
+            <summary>
+            Sets the member type on the filter descriptor based on the provided type
+            </summary>
+            <param name="descriptor"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Telerik.DataSource.FilterDescriptorExtensions.SetMemberTypeFrom(System.Collections.Generic.IEnumerable{Telerik.DataSource.IFilterDescriptor},System.Object)">
+            <summary>
+            Sets the member type on each filter descriptor based on the provided type, and returns the updated collection
+            </summary>
+            <param name="descriptors"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.DataSource.AggregateFunctionsGroup">
+            <summary>
+            The group aggregation functions and results
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateFunctionsGroup.AggregateFunctionsProjection">
+            <summary>
+            Gets or sets the aggregate functions projection for this group. 
+            This projection is used to generate aggregate functions results for this group.
+            </summary>
+            <value>The aggregate functions projection.</value>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateFunctionsGroup.GetAggregateResults(System.Collections.Generic.IEnumerable{Telerik.DataSource.AggregateFunction})">
+            <summary>
+            Gets the aggregate results generated for the given aggregate functions.
+            </summary>
+            <value>The aggregate results for the provided aggregate functions.</value>
+            <exception cref="T:System.ArgumentNullException"><c>functions</c> is null.</exception>
+        </member>
+        <member name="T:Telerik.DataSource.AggregateFunction">
+            <summary>
+             Represents an aggregate function.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateFunction.Caption">
+            <summary>
+            Gets or sets the informative message to display as an illustration of the aggregate function.
+            </summary>
+            <value>The caption to display as an illustration of the aggregate function.</value>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateFunction.SourceField">
+            <summary>
+            Gets or sets the name of the field, of the item from the set of items, which value is used as the argument of the aggregate function.
+            </summary>
+            <value>The name of the field to get the argument value from.</value>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateFunction.FunctionName">
+            <summary>
+            Gets or sets the name of the aggregate function, which appears as a property of the group record on which records the function works.
+            </summary>
+            <value>The name of the function as visible from the group record.</value>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateFunction.MemberType">
+            <summary>
+            The type of the field
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateFunction.ResultFormatString">
+            <summary>
+            Gets or sets a string that is used to format the result value.
+            </summary>
+            <value>The format string.</value>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateFunction.CreateAggregateExpression(System.Linq.Expressions.Expression,System.Boolean)">
+            <summary>
+            Creates the aggregate expression that is used for constructing expression
+            tree that will calculate the aggregate result.
+            </summary>
+            <param name="enumerableExpression">The grouping expression.</param>
+            <param name="liftMemberAccessToNull"></param>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateFunction.GenerateFunctionName">
+            <summary>
+            Generates default name for this function using this type's name.
+            </summary>
+            <returns>
+            Function name generated with the following pattern:
+            {<see cref="M:System.Object.GetType"/>.<see cref="P:System.Reflection.MemberInfo.Name"/>}_{<see cref="M:System.Object.GetHashCode"/>}
+            </returns>
+        </member>
+        <member name="T:Telerik.DataSource.AggregateFunctionCollection">
+            <summary>
+            Gets the <see cref="T:Telerik.DataSource.AggregateFunction"/> with the specified function name.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateFunctionCollection.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:Telerik.DataSource.AggregateFunction"/> with the specified function name.
+            </summary>
+            <value>
+            First <see cref="T:Telerik.DataSource.AggregateFunction"/> with the specified function name 
+            if any, otherwise null.
+            </value>
+        </member>
+        <member name="T:Telerik.DataSource.AggregateResult">
+            <summary>
+            Information for aggregates on the data.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateResult.#ctor(System.Object,System.Int32,Telerik.DataSource.AggregateFunction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.AggregateResult"/> class.
+            </summary>
+            <param name="value">The value of the result.</param>
+            <param name="count">The number of arguments used for the calculation of the result.</param>
+            <param name="function">Function that generated the result.</param>
+            <exception cref="T:System.ArgumentNullException"><c>function</c> is null.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateResult.#ctor(Telerik.DataSource.AggregateFunction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.AggregateResult"/> class.
+            </summary>
+            <param name="function"><see cref="T:Telerik.DataSource.AggregateFunction"/> that generated the result.</param>
+            <exception cref="T:System.ArgumentNullException"><c>function</c> is null.</exception>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateResult.#ctor(System.Object,Telerik.DataSource.AggregateFunction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.AggregateResult"/> class.
+            </summary>
+            <param name="value">The value of the result.</param>
+            <param name="function"><see cref="T:Telerik.DataSource.AggregateFunction"/> that generated the result.</param>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateResult.Value">
+            <summary>
+            Gets or sets the value of the result.
+            </summary>
+            <value>The value of the result.</value>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateResult.Member">
+            <summary>
+            The name of the field over which aggregation is performed.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateResult.FormattedValue">
+            <summary>
+            Gets the formatted value of the result.
+            </summary>
+            <value>The formatted value of the result.</value>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateResult.ItemCount">
+            <summary>
+            Gets or sets the number of arguments used for the calulation of the result.
+            </summary>
+            <value>The number of arguments used for the calulation of the result.</value>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateResult.Caption">
+            <summary>
+            Gets or sets the text which serves as a caption for the result in a user interface.
+            </summary>
+            <value>The text which serves as a caption for the result in a user interface.</value>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateResult.FunctionName">
+            <summary>
+            Gets the name of the function.
+            </summary>
+            <value>The name of the function.</value>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateResult.AggregateMethodName">
+            <summary>
+            The name of the aggregation method that is used.
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateResult.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="M:Telerik.DataSource.AggregateResult.Format(System.String)">
+            <summary>
+            Returns a formatted string based on the passed format and the current result value.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.DataSource.AggregateResultCollection">
+            <summary>
+            Gets the first <see cref="T:Telerik.DataSource.AggregateResult"/> which
+            <see cref="P:Telerik.DataSource.AggregateResult.FunctionName"/> is equal to <paramref name="functionName"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AggregateResultCollection.Item(System.String)">
+            <summary>
+            Gets the first <see cref="T:Telerik.DataSource.AggregateResult"/> which
+            <see cref="P:Telerik.DataSource.AggregateResult.FunctionName"/> is equal to <paramref name="functionName"/>.
+            </summary>
+            <value>
+            The <see cref="T:Telerik.DataSource.AggregateResult"/> for the specified function if any, otherwise null.
+            </value>
+        </member>
+        <member name="T:Telerik.DataSource.AverageFunction">
+            <summary>
+            AVERAGE aggregation function
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.AverageFunction.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.AverageFunction"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.AverageFunction.AggregateMethodName">
+            <summary>
+            Gets the Average method name.
+            </summary>
+            <value><c>Average</c>.</value>
+        </member>
+        <member name="T:Telerik.DataSource.CountFunction">
+            <summary>
+            COUNT aggregation function
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.CountFunction.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.CountFunction"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.CountFunction.AggregateMethodName">
+            <summary>
+            Gets the Count method name.
+            </summary>
+            <value><c>Count</c>.</value>
+        </member>
+        <member name="M:Telerik.DataSource.EnumerableAggregateFunction.CreateAggregateExpression(System.Linq.Expressions.Expression,System.Boolean)">
+            <summary>
+            Creates the aggregate expression using <see cref="T:Telerik.DataSource.Expressions.EnumerableAggregateFunctionExpressionBuilder"/>.
+            </summary>
+            <param name="enumerableExpression">The grouping expression.</param>
+            <param name="liftMemberAccessToNull"></param>
+        </member>
+        <member name="P:Telerik.DataSource.EnumerableAggregateFunctionBase.ExtensionMethodsType">
+            <summary>
+            Gets the type of the extension methods that holds the extension methods for
+            aggregation. For example <see cref="T:System.Linq.Enumerable"/> or <see cref="T:System.Linq.Queryable"/>.
+            </summary>
+            <value>
+            The type of that holds the extension methods. The default value is <see cref="T:System.Linq.Enumerable"/>.
+            </value>
+        </member>
+        <member name="M:Telerik.DataSource.EnumerableSelectorAggregateFunction.CreateAggregateExpression(System.Linq.Expressions.Expression,System.Boolean)">
+            <summary>
+            Creates the aggregate expression using <see cref="T:Telerik.DataSource.Expressions.EnumerableSelectorAggregateFunctionExpressionBuilder"/>.
+            </summary>
+            <param name="enumerableExpression">The grouping expression.</param>
+            <param name="liftMemberAccessToNull"></param>
+        </member>
+        <member name="T:Telerik.DataSource.FirstFunction">
+            <summary>
+            FIRST OR DEFAULT aggregation function
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.FirstFunction.AggregateMethodName">
+            <summary>
+            Gets the First method name.
+            </summary>
+            <value><c>First</c>.</value>
+        </member>
+        <member name="T:Telerik.DataSource.LastFunction">
+            <summary>
+            LAST OR DEFAULT aggregation function
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.LastFunction.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.LastFunction"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.LastFunction.AggregateMethodName">
+            <summary>
+            Gets the Last method name.
+            </summary>
+            <value><c>Last</c>.</value>
+        </member>
+        <member name="T:Telerik.DataSource.MaxFunction">
+            <summary>
+            MAX aggregation function
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.MaxFunction.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.MaxFunction"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.MaxFunction.AggregateMethodName">
+            <summary>
+            Gets the Max method name.
+            </summary>
+            <value><c>Max</c>.</value>
+        </member>
+        <member name="T:Telerik.DataSource.MinFunction">
+            <summary>
+             MIN aggregation function
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.MinFunction.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.MinFunction"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.MinFunction.AggregateMethodName">
+            <summary>
+            Gets the Min method name.
+            </summary>
+            <value><c>Min</c>.</value>
+        </member>
+        <member name="T:Telerik.DataSource.SumFunction">
+            <summary>
+            SUM aggregation function
+            </summary>
+        </member>
+        <member name="M:Telerik.DataSource.SumFunction.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.DataSource.SumFunction"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.SumFunction.AggregateMethodName">
+            <summary>
+            Gets the Min method name.
+            </summary>
+            <value><c>Min</c>.</value>
+        </member>
+        <member name="T:Telerik.DataSource.Group">
+            <summary>
+            Describes a group
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Group.HasSubgroups">
+            <summary>
+            Gets a value indicating whether this instance has any sub groups.
+            </summary>
+            <value>
+                <c>true</c> if this instance has sub groups; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.DataSource.Group.Member">
+            <summary>
+            The name of the group field
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.Group.ItemCount">
+            <summary>
+            Gets the number of items in this group.
+            </summary>
+            <value>The items count.</value>
+        </member>
+        <member name="P:Telerik.DataSource.Group.Subgroups">
+            <summary>
+            Gets the subgroups, if <see cref="P:Telerik.DataSource.Group.HasSubgroups"/> is true, otherwise empty collection.
+            </summary>
+            <value>The subgroups.</value>
+        </member>
+        <member name="P:Telerik.DataSource.Group.Items">
+            <summary>
+            Gets the items in this groups.
+            </summary>
+            <value>The items in this group.</value>
+        </member>
+        <member name="P:Telerik.DataSource.Group.Key">
+            <summary>
+            Gets the key for this group.
+            </summary>
+            <value>The key for this group.</value>
+        </member>
+        <member name="M:Telerik.DataSource.GroupExtensions.GetGroupSequenceUniqueKey(System.Collections.Generic.IEnumerable{Telerik.DataSource.IGroup})">
+            <summary>
+            Calculates unique int for given group in a group sequence, 
+            taking into account groups order, each group key and groups' count.
+            </summary>
+        </member>
+        <member name="T:Telerik.DataSource.IGroup">
+            <summary>
+            Describes a group
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.IGroup.Key">
+            <summary>
+            Gets the key for this group.
+            </summary>
+            <value>The key for this group.</value>
+        </member>
+        <member name="P:Telerik.DataSource.IGroup.Items">
+            <summary>
+            Gets the items in this groups.
+            </summary>
+            <value>The items in this group.</value>
+        </member>
+        <member name="P:Telerik.DataSource.IGroup.HasSubgroups">
+            <summary>
+            Gets a value indicating whether this instance has sub groups.
+            </summary>
+            <value>
+                <c>true</c> if this instance has sub groups; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.DataSource.IGroup.Member">
+            <summary>
+            The field name of the group
+            </summary>
+        </member>
+        <member name="P:Telerik.DataSource.IGroup.ItemCount">
+            <summary>
+            Gets the <see cref="P:Telerik.DataSource.IGroup.Items"/> count.
+            </summary>
+            <value>The <see cref="P:Telerik.DataSource.IGroup.Items"/> count.</value>
+        </member>
+        <member name="P:Telerik.DataSource.IGroup.Subgroups">
+            <summary>
+            Gets the subgroups, if <see cref="P:Telerik.DataSource.IGroup.HasSubgroups"/> is true, otherwise empty collection.
+            </summary>
+            <value>The subgroups.</value>
+        </member>
+        <member name="T:Telerik.DataSource.IJavaScriptSerializer">
+            <summary>
+            Describes an object that must be serializable for JavaScript
+            </summary>
+        </member>
+    </members>
+</doc>

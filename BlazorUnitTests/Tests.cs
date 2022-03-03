@@ -40,6 +40,7 @@ namespace BlazorUnitTests
             var weatherForecastServiceMock = Mock.Create<IWeatherForecastService>();
             Mock.Arrange(() => weatherForecastServiceMock.GetForecastAsync(Arg.IsAny<DateTime>()))
                 .Returns(new TaskCompletionSource<WeatherForecast[]>().Task);
+
             ctx.Services.AddSingleton<IWeatherForecastService>(weatherForecastServiceMock);
 
             // Act
